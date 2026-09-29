@@ -1,0 +1,11 @@
+replicaCount: 2
+
+image:
+  repository: ACCOUNT_ID.dkr.ecr.ap-south-1.amazonaws.com/cloud-deployments-app
+  tag: latest
+  pullPolicy: Always
+
+service:
+  type: LoadBalancer
+  port: 80
+  targetPort: 3000
