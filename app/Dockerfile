@@ -12,6 +12,8 @@ COPY . .
 
 FROM node:20-alpine
 
+RUN apk update && apk upgrade --no-cache
+
 RUN rm -rf /usr/local/lib/node_modules/npm \
     /usr/local/bin/npm \
     /usr/local/bin/npx
